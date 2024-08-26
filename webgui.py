@@ -166,7 +166,7 @@ def process_video(uploaded_img, uploaded_audio, width, height, length, seed, fac
         crop_rect = [max(0, cb - c_pad_crop), max(0, rb - r_pad_crop), min(ce + c_pad_crop, face_img.shape[1]), min(re + r_pad_crop, face_img.shape[0])]
         face_img = crop_and_pad(face_img, crop_rect)
         face_mask = crop_and_pad(face_mask, crop_rect)
-        print('face_img.shape is {face_img.shape}')
+        print(f'face_img.shape is {face_img.shape}')
         face_img = cv2.resize(face_img, (width, height))
         face_mask = cv2.resize(face_mask, (width, height))
 
